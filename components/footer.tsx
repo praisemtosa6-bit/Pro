@@ -17,14 +17,12 @@ const footerLinks = {
   Company: [
     { label: "About", href: "/#about" },
     { label: "Our Team", href: "/team" },
-    { label: "Our Work", href: "/#clients" },
     { label: "Blog", href: "#" },
     { label: "Contact", href: "/contact" },
   ],
   Resources: [
     { label: "Portfolio", href: "#" },
     { label: "Case Studies", href: "#" },
-    { label: "FAQs", href: "#" },
     { label: "Support", href: "#" },
   ],
   Legal: [

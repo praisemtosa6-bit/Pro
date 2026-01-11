@@ -14,9 +14,7 @@ export function LogoMarquee() {
     setMounted(true)
   }, [])
 
-  // Determine filter based on theme - invert for dark mode to make logos white
-  const logoFilter =
-    mounted && resolvedTheme === "dark" ? "grayscale(100%) brightness(0) invert(1)" : "grayscale(100%) brightness(0)"
+
 
   const logos = [
     { name: "265 Energy", src: "/265.png" },
@@ -27,8 +25,8 @@ export function LogoMarquee() {
     { name: "FISD", src: "/FISD.png" },
   ]
 
-  // Create a quadrupled array to ensure smooth seamless scrolling even on wide screens
-  const marqueeLogos = [...logos, ...logos, ...logos, ...logos]
+  // Ensure enough logos to cover screen width + buffer
+  const marqueeLogos = [...logos, ...logos, ...logos]
 
   return (
     <div className="relative w-full max-w-5xl mx-auto px-4 md:px-6 flex flex-col items-center gap-6 md:gap-10 overflow-hidden">
@@ -43,19 +41,37 @@ export function LogoMarquee() {
           WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
         }}
       >
-        <div className="flex gap-8 md:gap-20 animate-marquee items-center">
-          {marqueeLogos.map((logo, index) => (
-            <div key={index} className="shrink-0">
-              <Image
-                src={logo.src}
-                alt={`${logo.name} logo`}
-                width={150}
-                height={80}
-                className="h-12 md:h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                style={{ filter: logoFilter }}
-              />
-            </div>
-          ))}
+        <div className="flex w-full select-none overflow-hidden">
+          <div className="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-8 pr-8 md:gap-20 md:pr-20">
+            {marqueeLogos.map((logo, index) => (
+              <div key={index} className="shrink-0">
+                <Image
+                  src={logo.src}
+                  alt={`${logo.name} logo`}
+                  width={150}
+                  height={80}
+                  priority
+                  loading="eager"
+                  className="h-12 md:h-16 w-auto object-contain transition-opacity"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-8 pr-8 md:gap-20 md:pr-20" aria-hidden="true">
+            {marqueeLogos.map((logo, index) => (
+              <div key={`duplicate-${index}`} className="shrink-0">
+                <Image
+                  src={logo.src}
+                  alt={`${logo.name} logo`}
+                  width={150}
+                  height={80}
+                  priority
+                  loading="eager"
+                  className="h-12 md:h-16 w-auto object-contain transition-opacity"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

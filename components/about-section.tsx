@@ -90,8 +90,7 @@ export function AboutSection() {
                 headerVisible && "animate-slide-up-section-delayed",
               )}
             >
-              We are a dynamic media production company dedicated to crafting compelling narratives that captivate
-              audiences across various platforms. With a focus on innovation, creativity, and excellence.
+              Pro Media House is a full-service marketing agency dedicated to helping brands reach their full potential through creative strategies and data-driven solutions.
             </p>
           </div>
 

@@ -143,6 +143,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     /* Hide horizontal overflow on all routes */
@@ -159,6 +160,7 @@
     background-color: var(--accent);
     color: white;
   }
+
   ::-moz-selection {
     background-color: var(--accent);
     color: white;
@@ -169,13 +171,16 @@
   ::-webkit-scrollbar {
     width: 10px;
   }
+
   ::-webkit-scrollbar-track {
     background: var(--scrollbar-track);
   }
+
   ::-webkit-scrollbar-thumb {
     background: color-mix(in srgb, var(--primary) 50%, transparent);
     border-radius: 5px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: color-mix(in srgb, var(--primary) 70%, transparent);
   }
@@ -193,12 +198,15 @@
     transform: rotate(-35deg) translateY(0);
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.8;
   }
+
   100% {
     transform: rotate(-35deg) translateY(800px);
     opacity: 0;
@@ -214,13 +222,14 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
 /* Navbar drop-in animation from -y */
@@ -229,6 +238,7 @@
     transform: translateY(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -245,6 +255,7 @@
     transform: translateX(100px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -261,6 +272,7 @@
     transform: translateY(30px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -288,6 +300,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -315,6 +328,7 @@
     transform: translateX(-100px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -399,6 +413,7 @@
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-50%);
   }
@@ -408,6 +423,7 @@
   0% {
     transform: translateY(-50%);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -449,33 +465,40 @@
 
 /* Floating orb animations */
 @keyframes float-slow {
+
   0%,
   100% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(30px, -30px) scale(1.1);
   }
 }
 
 @keyframes float-slower {
+
   0%,
   100% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(-40px, 20px) scale(1.05);
   }
 }
 
 @keyframes float-medium {
+
   0%,
   100% {
     transform: translate(0, 0);
   }
+
   33% {
     transform: translate(20px, -20px);
   }
+
   66% {
     transform: translate(-15px, 10px);
   }
@@ -498,6 +521,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -513,6 +537,7 @@
   0% {
     transform: translate(-50%, -50%) rotate(0deg) translateX(60px) rotate(0deg);
   }
+
   100% {
     transform: translate(-50%, -50%) rotate(360deg) translateX(60px) rotate(-360deg);
   }
@@ -524,46 +549,56 @@
 
 /* Glitch effect layers */
 @keyframes glitch-1 {
+
   0%,
   90%,
   100% {
     opacity: 0;
     transform: translate(0);
   }
+
   92% {
     opacity: 0.8;
     transform: translate(-5px, 2px);
   }
+
   94% {
     opacity: 0;
   }
+
   96% {
     opacity: 0.5;
     transform: translate(5px, -2px);
   }
+
   98% {
     opacity: 0;
   }
 }
 
 @keyframes glitch-2 {
+
   0%,
   88%,
   100% {
     opacity: 0;
     transform: translate(0);
   }
+
   90% {
     opacity: 0.6;
     transform: translate(3px, -3px);
   }
+
   93% {
     opacity: 0;
   }
+
   95% {
     opacity: 0.4;
     transform: translate(-3px, 3px);
   }
+
   97% {
     opacity: 0;
   }
