@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "How do I get started with Pro Media House?",
     answer:
-      "Contact us at into@promediahouse-mw.com or call +265 888 282 510. We'll discuss your project goals, understand your requirements, and provide a customized proposal. We're based in Blantyre, Malawi, but work with clients worldwide.",
+      "Contact us at info@promediahouse-mw.com or call +265 888 282 510. We'll discuss your project goals, understand your requirements, and provide a customized proposal. We're based in Blantyre, Malawi, but work with clients worldwide.",
   },
 ]
 
@@ -73,16 +73,14 @@ export function FaqSection() {
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
             <h2
-              className={`text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance ${
-                isVisible ? "animate-slide-up-section" : "opacity-0"
-              }`}
+              className={`text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance ${isVisible ? "animate-slide-up-section" : "opacity-0"
+                }`}
             >
               Frequently asked questions
             </h2>
             <p
-              className={`text-muted-foreground text-lg max-w-2xl mx-auto ${
-                isVisible ? "animate-slide-up-section-delayed" : "opacity-0"
-              }`}
+              className={`text-muted-foreground text-lg max-w-2xl mx-auto ${isVisible ? "animate-slide-up-section-delayed" : "opacity-0"
+                }`}
             >
               Everything you need to know about Pro Media House and our services.
             </p>

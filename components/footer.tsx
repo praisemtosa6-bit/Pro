@@ -29,12 +29,12 @@ const footerLinks = {
     { label: "Privacy", href: "#" },
     { label: "Terms", href: "#" },
     { label: "Security", href: "#" },
-    { label: "Contact Us", href: "mailto:into@promediahouse-mw.com" },
+    { label: "Contact Us", href: "mailto:info@promediahouse-mw.com" },
   ],
 }
 
 const socialLinks = [
-  { icon: Mail, href: "mailto:into@promediahouse-mw.com", label: "Email" },
+  { icon: Mail, href: "mailto:info@promediahouse-mw.com", label: "Email" },
   { icon: Phone, href: "tel:+265888282510", label: "Phone" },
   { icon: MapPin, href: "#", label: "Location" },
 ]
@@ -108,11 +108,11 @@ export function Footer() {
                 +265 888 282 510
               </a>
               <a
-                href="mailto:into@promediahouse-mw.com"
+                href="mailto:info@promediahouse-mw.com"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                into@promediahouse-mw.com
+                info@promediahouse-mw.com
               </a>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
@@ -127,7 +127,7 @@ export function Footer() {
           {/* Logo and tagline */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-4 lg:mb-0">
             <Link href="/" className="inline-block mb-4">
-              <div className="text-xl font-bold text-primary">Pro Media</div>
+              <div className="text-xl font-bold text-primary">Pro Media House</div>
             </Link>
             <p className="text-sm text-muted-foreground max-w-[200px]">
               Empowering stories, engaging audiences. Professional media production and digital solutions.
@@ -160,10 +160,13 @@ export function Footer() {
             © {new Date().getFullYear()} Pro Media House. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
-            <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <Link
+              href="/contact"
+              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors group"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse group-hover:bg-primary transition-colors" />
               Ready to collaborate
-            </span>
+            </Link>
           </div>
         </div>
       </div>

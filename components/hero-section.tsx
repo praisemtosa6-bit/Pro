@@ -21,8 +21,8 @@ export function HeroSection() {
           </h1>
 
           <p className="hidden sm:block mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty animate-slide-up-delayed-2">
-            Professional digital marketing, IT consulting, media production, and animation to help your brand tell
-            compelling stories that resonate with your audience worldwide.
+            Your partner in comprehensive media production, digital marketing, and professional technology solutions,
+            dedicated to elevating your brand's presence and impact globally.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up-delayed-3">
